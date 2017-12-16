@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Posted</title>
+  <link rel="stylesheet" href="forms.css"/>
+</head>
+<body>
+
+<header>Where are the parameters?</header>
+<aside>
+  <p>GET requests should be "idempotent", meaning you should be able to repeat the request multiple times without changing things.  This means GET request are usually to "read" data, so any parameters sent tend be used for that response only, like a Google search (which is a GET request that sends your search terms).</p>  
+  <p>POST requests, on the other hand, are not idempotent, and tend to be used more often for sending data that will alter something server-side, such as creating a user account on a site.  We will cover the methods in more detail when we get to AJAX and REST.</p>
+  <section>
+  <header>A time I messed up...</header>
+  <p> Early in my career I made a small site to record local events.  It had a public interface to add events, and a private admin interface to do management tasks, like approving events to be shown or deleting events before the event date.  It worked great, until one day we noticed the events added the day before were missing.  We replaced them and everything was working, until the next day when they were gone again.  After MANY hours of searching, I was able to find that the program that checked the site for broken links was the problem.</p>  
+  <p>It would load a page, find all the links, and add them to the queue of pages to check.  Because it ran from a machine with access to the Admin pages, it checked them for broken pages too.  Which meant it was issuing a GET request to every link in the queue.  Including the "Delete Events" link that was on my admin page, which then behaved just like if a person had clicked the link.</p>
+  <p>Had I done the right thing and kept all my GET requests as idempotent and had the Delete command use a different method, the link verifier would not have caused a problem.  </p>
+  </section>
+</aside>
+<p>POST requests send their data in the body of the request rather than in the URL (remember that every HTTP request has a collection of "headers" (key/value pairs) and a "body".  In addition to giving you cleaner URLs, this makes it easier to submit large data, such as files and images.</p>
+<p>You can see the POST data in the Network tab of your Dev Tools - Network -&gt; select request -&gt; Headers -&gt; Scroll to bottom.</p>
+<p>
+You now know enough to do some work on your own.  Experimentation is very important.</p>
+<p>This webserver (that you started with `npm start`) will report any parameters it is sent, even from pages that don't yet exist, so feel free to write your own and try it out.  Remember that the "action" of the form is where the data will be sent.  In this case, that's a different HTML page, though the server that gets the request takes all the parameters and just returns the requested HTML file.  
+</p>
+
+</body>
+</html>

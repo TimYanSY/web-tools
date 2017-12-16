@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form input types</title>
+  <link rel="stylesheet" href="forms.css"/>
+</head>
+<body>
+
+<header>You may have gotten here via a form submission</header>
+
+<aside>You can request this url without submitting a form - the server considers each request separately (stateless)</aside>
+<form method="GET" action="form-post.html">
+  <p>There are multiple kinds of HTML form input, but ultimately they all translate into key:value pairs sent in a request.  (file uploads are more complicated)</p>
+  <fieldset>
+    <div class="fieldset-flex">
+      <legend>Input field examples</legend>
+      <input name="text-input" value="Default text"/>
+      <input type="text" name="placeholder-example" placeholder="Not a default"/>  
+      <input type="password" placeholder="password field"/>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="fieldset-flex">
+      <legend>Dropdown examples</legend>
+      <select name="dropdown">
+        <option>first option is selected by default</option>
+        <option selected>...unless the HTML says otherwise</option>
+        <option>The key (name) is in the "select" tag, while the value is the option</option>
+        <option value="different">You can also specify a value other than the text for an option</option>
+      </select>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="fieldset-flex">
+      <legend>Checkbox examples</legend>
+      <input type="checkbox" name="checkbox-example" value="must be checked to send key"/> Checkboxes do not send key OR value if not checked (weird and annoying)
+      <label> 
+        <input type="checkbox" name="label-example" value="hard-to-record-UNchecking"/> Labels are often used to make associated text also clickable, like this
+      </label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="fieldset-flex">
+      <legend>Radio Button examples</legend>
+      <label><input type="radio" name="radio-example" value="a value"/>Radio buttons share a name</label>
+      <label><input type="radio" name="radio-example" value="different value"/>Radio buttons only allow one choice per name</label>
+      <label><input type="radio" name="radio-example" value="defaulted to" checked/>Radio buttons start with nothing chosen unless the HTML says otherwise</label>
+      <label class="standalone">
+        <input type="radio" name="different-radio"/>Radio Buttons send even without a value (unlike checkboxes) and cannot be unselected by user
+      </label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="fieldset-flex">
+      <legend>Input field examples</legend>
+      <textarea name="long-text">Textareas allow for long input.  They are strange and still have some presentational controls in the HTML.</textarea>
+    </div>
+  </fieldset>
+  <div class="button-group">
+    <button type="submit">Submit selected values</button> 
+    <button type="button">Does not submit</button>
+    <button type="button" disabled>Can't be clicked</button>
+  </div>
+</form>
+<hr>
+<form method="GET" action="index.html">
+  A page can have multiple forms, each acts as if the others did not exist.
+  <div class="button-group">
+    <button>Buttons have strange defaults - this submits in most browsers</button>
+  </div>
+</form>
+
+</body>
+</html>

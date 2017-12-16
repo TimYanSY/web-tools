@@ -1,0 +1,49 @@
+* { 
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: "Open Sans", sans-serif;
+}
+
+aside {
+  box-sizing: border-box;
+  border: black 1px solid;
+  border-radius: 15px;
+  min-height: 75px;
+  width: 35%;
+  float: right;  
+  padding: 15px;
+  padding-top: 0;
+  margin: 5px;
+  margin-top: 0;
+}
+
+.button-group {
+  display: block;
+  padding: 10px;
+}
+
+.fieldset-flex { 
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; 
+}
+
+.fieldset-flex > * {
+  margin: 5px;
+}
+
+.fieldset-flex > legend, .standalone {
+  flex: 1 0 100%;
+}
+
+header {
+  font-size: 1.1rem;;
+  font-weight: bold;
+}
+textarea { 
+  width: 100%;
+  min-height: 10vh;
+}
+

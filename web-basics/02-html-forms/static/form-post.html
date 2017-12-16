@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms and POST</title>
+  <link rel="stylesheet" href="forms.css"/>
+</head>
+<body>
+
+<header>Using POST method</header>
+
+<aside>GET and POST are HTTP "methods", also known as HTTP "verbs".  There are others which we will cover later, but technically only GET andPOST are supported in HTML forms. (in reality, a few others are) </aside>
+
+<p>A link can only send GET requests, while a form can send GET or POST.</p>
+
+
+<form method="POST" action="form-posted.html">
+  <p>This form has only a couple of examples, but any valid form field can go here, just like with GET</p>
+  <div>Example: <input name="example"/></div>
+  <div>Checkbox: <input name="mr-box" type="checkbox"/></div>
+  <button type="submit">Submitting a Form</button>
+</form>
+</body>
+</html>
