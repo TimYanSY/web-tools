@@ -1,0 +1,30 @@
+#one {
+    width: 70px;
+    overflow:hidden;
+}
+
+#two {
+    float: left;
+    width: 66.66%;
+}
+
+#three {
+    float: left;
+    width: 33.34%;
+}
+
+#one {
+    background-color: lightblue;
+}
+
+#two {
+    background-color: lightcoral
+}
+
+#three, #four {
+    background-color: lightblue;
+}
+
+#four {
+    background-color: lightgreen;
+}

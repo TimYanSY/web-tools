@@ -1,0 +1,26 @@
+#a {
+    list-style-type: square;
+}
+
+#three {
+    visibility: hidden;
+}
+
+#one {
+    border-style: solid;
+    border-color: lightcoral;
+}
+
+#two {
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#texttwo {
+    color: #C0FFEE;
+}
+
+.class1.class2{
+    text-decoration: underline;
+}
