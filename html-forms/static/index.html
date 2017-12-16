@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>html-forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="totalBlock">
+      <form method="POST" action="complete.html">
+          <div id="namediv">My Name: <input name="name"/></div>
+
+          <div id="dropdowndiv">I prefer to:
+              <select name="favorite">
+                  <option value="read">Read Books</option>
+                  <option value="watch">Watch TV/Movies</option>
+                  <option value="socialize">Hang out with friends</option>
+              </select>
+          </div>
+          
+          <div id="textdiv">On a scale of 1 (unfriendly) to 5 (very friend) I am:</div>
+          
+          <div class="checkboxgroup">
+              <label for="radionButton1">1</label>
+              <input type="radio" name="friendliness" id="radionButton1" value="1"/>
+          </div>
+          <div class="checkboxgroup">
+              <label for="radionButton2">2</label>
+              <input type="radio" name="friendliness" id="radionButton2" value="2"/>
+          </div>
+          <div class="checkboxgroup">
+              <label for="radionButton3">3</label>
+              <input type="radio" name="friendliness" id="radionButton3" value="3"/>
+          </div>
+          <div class="checkboxgroup">
+              <label for="radionButton4">4</label>
+              <input type="radio" name="friendliness" id="radionButton4" value="4"/>
+          </div>
+          <div class="checkboxgroup">
+              <label for="radionButton5">5</label>
+              <input type="radio" name="friendliness" id="radionButton5" value="5"/>
+          </div>
+
+          <div id="buttondiv">
+              <button type="submit">Enter</button>
+          </div>
+          
+      </form> 
+  </div>
+</body>
+</html>
